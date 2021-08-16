@@ -15,7 +15,7 @@ for entry in data:
         url = entry["request"]["url"]
         res = requests.get(url)
         if res.ok:
-            filename = url.split("https://play.retro-mmo.com/res/")[1]
+            filename = url.split("https://play.retro-mmo.com/")[1]
             if not os.path.exists(os.path.dirname(filename)):
                 os.makedirs(os.path.dirname(filename))
             print(filename)
